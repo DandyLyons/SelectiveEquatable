@@ -1,4 +1,6 @@
 # SelectiveEquatable
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FDandyLyons%2FSelectiveEquatable%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/DandyLyons/SelectiveEquatable)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FDandyLyons%2FSelectiveEquatable%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/DandyLyons/SelectiveEquatable)
 
 SelectiveEquatable is a Swift library that allows you to perform equality checks on object and value instances by specifying which properties to include in the comparison. Any combination of properties can be included in the comparison so long as they conform to the `Equatable` protocol.
 
