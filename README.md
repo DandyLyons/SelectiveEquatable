@@ -32,7 +32,7 @@ You can also use the Swift Package Manager to install `SelectiveEquatable`. Add 
 
 ```swift
 dependencies: [
-    .package(url: "", from: "1.0.0")
+    .package(url: "https://github.com/DandyLyons/SelectiveEquatable", from: "1.0.0")
 ]
 ```
 
