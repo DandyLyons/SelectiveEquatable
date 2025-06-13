@@ -11,4 +11,13 @@ extension  SelectiveEquatable {
         }
         return true
     }
+    
+    public func isNotEqual<each V: Equatable>(to other: Self, by keyPath: repeat KeyPath<Self, each V>) -> Bool {
+        for kp in repeat each keyPath {
+            if self[keyPath: kp] != other[keyPath: kp] {
+                return true
+            }
+        }
+        return false
+    }
 }
