@@ -32,7 +32,13 @@ extension Collection where Element: Identifiable & Equatable {
     }
     
     // Build lookup dictionary from this collection
-    let selfLookup = Dictionary(uniqueKeysWithValues: self.map { ($0.id, $0) })
+    let selfLookup = Dictionary(
+      self.map { ($0.id, $0) },
+      uniquingKeysWith: { first, _ in
+        
+        return first // Keep the first value if duplicates found
+      }
+    )
     
     // Ensure no duplicate IDs in this collection
     guard selfLookup.count == self.count else {
