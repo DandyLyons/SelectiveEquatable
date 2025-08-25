@@ -121,6 +121,19 @@ struct CollectionEquivalentTests {
       #expect(!collection1.isEquivalent(to: collection2))
       #expect(!collection2.isEquivalent(to: collection1))
   }
+  
+  @Test("Collections with duplicate IDs in both collections are not equivalent")
+  func testDuplicateIDsInBoth() {
+    let id = UUID()
+    let person1 = Person(id: id, name: "Alice", age: 30)
+    
+    let collection1 = [person1, person1] // Duplicate IDs
+    let collection2 = [person1, person1] // Same duplicate IDs
+    
+    #expect(!collection1.isEquivalent(to: collection2))
+  }
+      
+
 
   @Test("Different collection types with same elements are equivalent")
   func testDifferentCollectionTypes() {
